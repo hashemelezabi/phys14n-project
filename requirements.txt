@@ -3,3 +3,4 @@ pyquil
 networkx
 scipy
 matplotlib
+grove
