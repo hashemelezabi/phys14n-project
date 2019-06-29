@@ -1,1 +1,9 @@
-# phys14n-project
+# Clustering using the Quantum Approximate Optimization Algorithm (QAOA) on a MAXCUT graph
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/hashemelezabi/phys14n-project/master)
+
+In this project, I implement a version of the algorithm described [here](https://arxiv.org/abs/1712.05771), making use of Rigetti's Python library [Grove](https://grove-docs.readthedocs.io/en/latest/index.html). This is a clustering algorithm designed to run on a hybrid quantum-classical computer, and it uses the Quantum Approximate Optimization Algorithm (QAOA) to solve weighted MAX-CUT on a graph representing the given points and their distances from each other.
+
+The quantum algorithm works by constructing a cost Hamiltonian whose ground state encodes the solution to MAX-CUT, and then incrementally applying transformations to move to this ground state starting from a reference Hamiltonian. The optimal rotations applied to approach the ground state are obtained via the Variational Quantum Eigensolver algorithm, an implementation of which is available in Grove. More information about QAOA can be found [here](https://grove-docs.readthedocs.io/en/latest/qaoa.html).
+
+In the Jupyter notebook, you can find an in-depth explanation of my application of this algorithm to clustering (using a weighted MAX-CUT instance), including the work I did to adapt the provided code from Grove to the problem of clustering and a comparison with the classical clustering algorithm k-means. You can also run the notebook using Binder [here!](https://mybinder.org/v2/gh/hashemelezabi/phys14n-project/master)
